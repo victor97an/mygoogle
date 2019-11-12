@@ -1,0 +1,78 @@
+html, 
+body {
+    height: 100%;
+}
+
+#logo {
+    height: 100px;
+    width: 400px;
+}
+.grid{
+    display: grid;
+}
+
+header .grid{
+    width: 100%;
+    grid-template-columns: 100px 100px;
+    align-content: start;
+    justify-content: end;
+    position: fixed;
+}
+
+footer .grid{
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3,1fr) 25% 25% repeat(3, 1fr);
+    grid grid-template-rows: 100px 100px;
+    grid-template-areas: "ct . . . . . . ."
+                        "pub mk abt how . priv term set";
+    grid-template-rows: 20px 20px;
+    column-gap: 20px;
+    justify-content: stretch;
+    align-content: end;
+    position: fixed;
+    bottom: 0;
+}
+
+.formulario{
+    min-height:100%;
+    position:relative;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.country{
+    grid-area: ct;
+}
+
+.pub{
+    grid-area: pub;
+}
+
+.mark{
+    grid-area: mk;
+}
+
+.about{
+    grid-area: abt;
+}
+
+.how{
+    grid-area: how;
+}
+
+.priv{
+    grid-area: priv;
+}
+
+.term{
+    grid-area: term;
+}
+
+.set{
+    grid-area: set;
+}
